@@ -14,6 +14,14 @@ public class ServioticyEncoder extends AbstractEncoder {
     @Override
     public byte[] toBytes(final DCPEvent dcpEvent) {
         MutationMessage message = (MutationMessage)dcpEvent.message();
-        return message.content().toString(CharsetUtil.UTF_8).getBytes();
+	String key = message.key();
+	String[] splits = key.split("-");
+	String soId = splits[0];
+	String streamId = splits[1];
+	String result = "{\"opid\": \"2727\", \"soid\": \"" + soId +
+                        "\", \"streamid\": \"" + streamId + "\", \"su\": " + 
+                        message.content().toString(CharsetUtil.UTF_8) + "}";
+        return result.getBytes();
+        //return message.content().toString(CharsetUtil.UTF_8).getBytes();
     }
 }
