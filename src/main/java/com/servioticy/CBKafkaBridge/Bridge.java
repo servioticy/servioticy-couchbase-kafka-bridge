@@ -11,7 +11,7 @@ public class Bridge {
                         .builder()
                         .kafkaFilterClass("com.servioticy.CBKafkaBridge.ServioticyFilter")
                         .kafkaValueSerializerClass("com.servioticy.CBKafkaBridge.ServioticyEncoder")
-                        .kafkaTopic("updates")
+                        .kafkaTopic("updates-secure")
                         .kafkaZookeeperAddress("localhost:2181")
                         .couchbaseNodes("localhost")
                         .couchbaseBucket("zsecsoupdates")
