@@ -14,7 +14,7 @@ public class Bridge {
                         .kafkaTopic("updates")
                         .kafkaZookeeperAddress("localhost:2181")
                         .couchbaseNodes("localhost")
-                        .couchbaseBucket("zsecsoupdates")
+                        .couchbaseBucket("soupdates")
                         .dcpEnabled(true);
         CouchbaseKafkaConnector connector = CouchbaseKafkaConnector.create(builder.build());
         connector.run();

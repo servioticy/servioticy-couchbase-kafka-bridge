@@ -22,6 +22,5 @@ public class ServioticyEncoder extends AbstractEncoder {
                         "\", \"streamid\": \"" + streamId + "\", \"su\": " + 
                         message.content().toString(CharsetUtil.UTF_8) + "}";
         return result.getBytes();
-        //return message.content().toString(CharsetUtil.UTF_8).getBytes();
     }
 }
